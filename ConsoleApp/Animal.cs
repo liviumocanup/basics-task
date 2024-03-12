@@ -1,13 +1,15 @@
 using System;
 
-public class Animal : ICloneable
+public abstract class Animal : ICloneable
 {
     private int _age;
 
     public string Name { get; set; }
-    public int Age { 
+    public int Age
+    {
         get { return _age; }
-        set {
+        set
+        {
             if (value < 0)
             {
                 throw new ArgumentOutOfRangeException(nameof(value), "Age cannot be negative");
@@ -32,7 +34,7 @@ public class Animal : ICloneable
         return this.MemberwiseClone();
     }
 
-    public override string ToString()
+    public sealed override string ToString()
     {
         return $"Animal {Name} of type {GetType().Name} is {Age} years old";
     }
