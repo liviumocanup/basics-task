@@ -11,4 +11,17 @@ public class Parrot : Animal
     {
         Console.WriteLine(Name + " chirps: " + sound);
     }
+
+    public void MakeSound(string sound, bool mentionName, bool capitalize = false)
+    {
+        string chirp;
+        
+        if (mentionName)
+        {
+            chirp = Name + " chirps: " + sound;
+        }
+        else chirp = sound;
+
+        Console.WriteLine(capitalize ? chirp.ToUpper() : chirp);
+    }
 }
