@@ -15,7 +15,7 @@ public class Parrot : Animal
     public void MakeSound(string sound, bool mentionName, bool capitalize = false)
     {
         string chirp;
-        
+
         if (mentionName)
         {
             chirp = Name + " chirps: " + sound;

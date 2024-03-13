@@ -20,7 +20,7 @@ public class TaskFour
 
         Parrot parrot = new Parrot("Polly", 2);
         parrot.MakeSound("Hello", true);
-        parrot.MakeSound(mentionName: true, sound:"Hi");
-        parrot.MakeSound(mentionName: false, sound:"Chirp chirp", capitalize: true);
+        parrot.MakeSound(mentionName: true, sound: "Hi");
+        parrot.MakeSound(mentionName: false, sound: "Chirp chirp", capitalize: true);
     }
 }
